@@ -1,0 +1,4 @@
+testapp
+=======
+
+omrails test
