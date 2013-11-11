@@ -67,4 +67,14 @@ Testapp::Application.configure do
 
   # heroku deploying setting
   config.assets.initialize_on_precompile = false
+
+  # Confirguring Amazon S3 for Paperclip fill upload
+    config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['tairo-onemonth'],
+      :access_key_id => ENV['AKIAJY4JKRAOILYYBDFA'],
+      :secret_access_key => ENV['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']
+    }
+  }
 end
