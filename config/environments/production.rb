@@ -69,12 +69,12 @@ Testapp::Application.configure do
   config.assets.initialize_on_precompile = false
 
   # Confirguring Amazon S3 for Paperclip fill upload
-    config.paperclip_defaults = {
+  config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['tairo-onemonth'],
-      :access_key_id => ENV['AKIAJY4JKRAOILYYBDFA'],
-      :secret_access_key => ENV['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']
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 end
