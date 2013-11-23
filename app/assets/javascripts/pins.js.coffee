@@ -5,4 +5,4 @@
 jQuery ->
 	$('#pins').imagesLoaded ->
 		$('#pins').masonry 
-			isFitWidth: true, itemSelector: ".box"
+			isAnimated: true, itemSelector: ".box"
